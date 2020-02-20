@@ -1,0 +1,30 @@
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div id="sign-up-container" class="col-8">
+        <h2>Sign Up for Foo App</h2>
+        <p>It's free, and provides you with zero value!</p>
+        <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+          <div class="form-group">
+            <label>Username</label>
+            <input class="form-control" type="text" placeholder="Your Username" formControlName="username" autofocus>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="password" placeholder="Password" formControlName="password">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="phone" class="form-control" formControlName="phone" placeholder="+1-202-555-0145">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+              <span *ngIf="!submitting">Sign Up</span>
+              <span *ngIf="submitting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

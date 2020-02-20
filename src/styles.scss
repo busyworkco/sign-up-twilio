@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input {
+  padding: 1.25rem !important;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #00C6B1;
+  border-color: transparent;
+  letter-spacing: 0.08rem;
+
+  &:hover {
+    background-color: mix(#000, #00C6B1, 10%);
+    border-color: transparent;
+  }
+}

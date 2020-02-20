@@ -1,0 +1,22 @@
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div id="sign-up-container" class="col-8">
+        <h2>Verify your Phone Number</h2>
+        <p>Please activate using the code you've just received.</p>
+        <form [formGroup]="verifyForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Activation Code</label>
+            <input class="form-control" type="number" maxlength="4" placeholder="1234" formControlName="activation_code">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">
+              <span *ngIf="!verifying">Verify</span>
+              <span *ngIf="verifying" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
